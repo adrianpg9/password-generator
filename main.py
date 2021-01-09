@@ -26,15 +26,13 @@ for char in range(1, nr_numbers + 1):
   password.append(random.choice(numbers)) 
 
 
-for current_password in range(0, len(password)):
- 
-  current_char = str(random.choice(password)) #obtains a random element for the list 
+random.shuffle(password)
+
+final_password = ""
+for char in password:
+  final_password += char
 
 
-  final_password += current_char #appeands the randomly selecet element of the list to the final password 
-  password.remove(current_char) # removes the element so it cannot be used again 
-
-  
-print("Hard Password: " + str(final_password)) # prints the finalize password 
+print(f"Hard Password: {final_password}" ) # prints the finalize password 
 
 
